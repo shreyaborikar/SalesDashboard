@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@1.2.0/dist/chartjs-plugin-zoom.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Sales Data Visualization Dashboard</h1>
+      <p>
+        Explore the sales data for the first five months of the year. Use the
+        filters to drill down and the zoom feature to get a closer look at the
+        data.
+      </p>
+    </header>
+    <div class="filter-container">
+      <label for="monthFilter">Filter by Month:</label>
+      <select id="monthFilter">
+        <option value="all">All</option>
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+      </select>
+    </div>
+    <div class="dashboard">
+      <div class="chart-container">
+        <canvas id="barChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <canvas id="pieChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <canvas id="lineChart"></canvas>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
